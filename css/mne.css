@@ -1,0 +1,43 @@
+#eeg_pic_but{
+  position: relative;
+  float: right;
+  max-width: 15%;
+  max-height: 20%;
+  margin-right: 10%;
+}
+
+#flot-placeholder{
+  float:left;
+  width:90%;
+  height:100%;
+}
+
+div.select_sensor{
+  float: left;
+  width: 19.5%;
+  margin:1px;
+}
+
+div.select_sensor input[type="checkbox"]{
+  display: none;
+}
+div.select_sensor label::before{
+  content: attr(typein);
+}
+
+.white{
+  background-color: white;
+}
+
+.pink{
+  background-color: pink;
+}
+
+label:hover{
+  cursor: pointer;
+}
+
+label{
+  width: 100px;
+  height: 100px;
+}

@@ -1,0 +1,76 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery.event.drag.js"></script>
+<script type="text/javascript" src="../js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="../js/jquery.flot.js"></script>
+<script type="text/javascript" src="../js/jquery.flot.time.js"></script>
+<script type="text/javascript" src="../js/jshashtable-2.1.js"></script>
+<script type="text/javascript" src="../js/jquery.numberformatter-1.2.3.min.js"></script>
+<script type="text/javascript" src="../js/jquery.flot.symbol.js"></script>
+<script type="text/javascript" src="../js/jquery.flot.axislabels.js"></script>
+
+<script type="text/javascript" src="../js/jquery.canvaswrapper.js"></script>
+<script type="text/javascript" src="../js/jquery.colorhelpers.js"></script>
+<script type="text/javascript" src="../js/jquery.flot.saturated.js"></script>
+<script type="text/javascript" src="../js/jquery.flot.browser.js"></script>
+<script type="text/javascript" src="../js/jquery.flot.drawSeries.js"></script>
+<script type="text/javascript" src="../js/jquery.flot.uiConstants.js"></script>
+<script type="text/javascript" src="../js/jquery.flot.navigate.js"></script>
+<script type="text/javascript" src="../js/jquery.flot.hover.js"></script>
+
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>   -->
+
+<script src="../js/papaparse.js"></script>
+<script type="text/javascript" src="../js/parse.js"></script>
+<!--<script src="../js/mne.js"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<link rel="stylesheet" href="../css/mne.css">
+
+<style type="text/css">
+</style>
+
+<Title>
+  EEG edit
+</Title>
+
+  <body>
+      <h1 style="font-size:3em">EEG訊號顯示</h1>
+      <p>
+        <input type="file" id="files" multiple style="background:#ccc;">
+        <button id="submit-parse">Parse</button>
+      </p>
+      <p>
+        Scale:<input type="number" id="scale" value=0 style="background:#ccc;">
+      </p>
+      <p>
+        Input iterval time:<input type="number" id="xPadding" value=0 style="background:#ccc;">seconds
+      </p>
+      <p id="totalTime"></p>
+
+      <button id="plotSignal">Plot signal</button>
+      <button id="previousPage">previous page</button>
+      <button id="nextPage">next page</button>
+      <span id="hoverdata"></span>
+      <button id="eeg_pic_but" > Select Channel </button>
+
+      <div style="width:100%;height:75%;margin:10px">
+        <div id="flot-placeholder"></div>
+
+        <div id="scale" style="width:10%;height:20%;float:right;position:relative; top:74%;">
+         
+            <p id="scale_val"></p>
+            <svg id="scale_svg" height="50%" width="100%">
+            </svg>
+
+          
+        </div>
+
+        <div id="choices"></div>
+      </div>
+
+
+  </body>
+</html>
